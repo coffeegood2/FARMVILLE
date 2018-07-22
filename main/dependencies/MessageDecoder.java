@@ -16,7 +16,7 @@ public class MessageDecoder {
 			for (int x = 0; x < width; x += 10) {
 				if (original.getRGB(x, y) != altered.getRGB(x, y)) {
 					Color pixel = new Color(altered.getRGB(x, y));
-					char letter = (char)Math.abs(pixel.getGreen() - 255);
+					char letter = (char)pixel.getGreen();
 					word += letter;
 				}
 				else
